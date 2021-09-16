@@ -1,0 +1,59 @@
+﻿@page
+@model laba1.Pages.WebResources.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>WebPage</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="WebPage.Name" class="control-label"></label>
+                <input asp-for="WebPage.Name" class="form-control" />
+                <span asp-validation-for="WebPage.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WebPage.URL" class="control-label"></label>
+                <input asp-for="WebPage.URL" class="form-control" />
+                <span asp-validation-for="WebPage.URL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WebPage.Description" class="control-label"></label>
+                <input asp-for="WebPage.Description" class="form-control" />
+                <span asp-validation-for="WebPage.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WebPage.Keywords" class="control-label"></label>
+                <input asp-for="WebPage.Keywords" class="form-control" />
+                <span asp-validation-for="WebPage.Keywords" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WebPage.ReleaseDate" class="control-label"></label>
+                <input asp-for="WebPage.ReleaseDate" class="form-control" />
+                <span asp-validation-for="WebPage.ReleaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WebPage.Rating" class="control-label"></label>
+                <input asp-for="WebPage.Rating" class="form-control" />
+                <span asp-validation-for="WebPage.Rating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
